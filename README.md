@@ -2,17 +2,17 @@ Make a backup before you run script
 
 You just need:
 
-Save script into txt, for example, with name `amnesic.sh` in `/home/user/` in appVM.
+Save script, for example, in `/home/user/` in appVM.
 
 Copy file to dom0. Run it in dom0 terminal (qube-name - appVM with script):
-`qvm-run --pass-io qube-name 'cat /home/user/amnesic.sh' > amnesic.sh`
+`qvm-run --pass-io qube-name 'cat /home/user/qubes-antiforensic-modes.sh' > qubes-antiforensic-modes.sh`
 
 
 Make file executable. Run in dom0 terminal:
-`sudo chmod +x amnesic.sh`
+`sudo chmod +x qubes-antiforensic-modes.sh`
 
 Run script in dom0 terminal with sudo
-`sudo ./amnesic.sh`
+`sudo ./qubes-antiforensic-modes.sh`
 
 After launching Amnesic Mode from the GRUB menu, only dom0 operates in amnesia mode by default.
 To run any qube in amnesia mode, just copy any qube to the varlibqubes pool and launch this copy:
