@@ -1,2 +1,11 @@
-# qubes-antiforensic-modes
-This script describes a simple script for Qubes OS that adds two new modes to the GRUB menu: an encrypted ephemeral overlay and a fully RAM-based zram mode, providing anonymity and forensic protection by mounting dom0 in read-only mode and wiping memory upon shutdown.
+Make a backup before you run script
+
+You just need:
+
+Save script into txt, for example, with name `amnesic.sh` in `/home/user/` in appVM.
+Copy file to dom0. Run it in dom0 terminal (qube-name - appVM with script):
+`qvm-run --pass-io qube-name 'cat /home/user/amnesic.sh' > amnesic.sh`
+Make file executable. Run in dom0 terminal:
+`sudo chmod +x amnesic.sh`
+Run script in dom0 terminal with sudo
+`sudo ./amnesic.sh`
