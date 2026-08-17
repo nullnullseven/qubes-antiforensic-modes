@@ -19,21 +19,22 @@ To run any qube in amnesia mode, just copy any qube to the varlibqubes pool and 
 
 In Qube Manager click clone qube and in Advanced select varlibqubes in Storage pool. Or create a new appVM, and select varlibqubes Storage pool in the Advanced Options.
 
-Your appVMs / Templates in default vm-pool will act like templates: make persistent changes there, while qubes in the varlibqubes pool will behave like disposable VMs (dvm) - they will be completely wiped after dom0 shutdown.
+**Notes:**
+* Your appVMs / Templates in default vm-pool will act like templates: make persistent changes there, while qubes in the varlibqubes pool will behave like disposable VMs (dvm) - they will be completely wiped after dom0 shutdown.
 
-If you copied sys-usb, enable keyboard and mouse support for the sys-usb copy in Qubes Global Settings. Do not run both sys-usb qubes simultaneously. Also, do not run sys-whonix and its copy at the same time. Additionally, add the sys-whonix copy to Updates in Qubes Global Settings for automatic updates.
+* If you copied sys-usb, enable keyboard and mouse support for the sys-usb copy in Qubes Global Settings. Do not run both sys-usb qubes simultaneously. Also, do not run sys-whonix and its copy at the same time. Additionally, add the sys-whonix copy to Updates in Qubes Global Settings for automatic updates.
 
-Remember:
-`varlibqubes pool` = full amnesia mode (if dom0 in amnesic mode)
-`vm-pool` = persistent mode (even if dom0 in amnesic mode!)
+* Remember:
+`varlibqubes pool` = full amnesia mode (if dom0 in amnesic mode).
+`vm-pool` = persistent mode (even if dom0 in amnesic mode!).
 
-Run script after dom0 / Xen kernel updates in default persistent dom0 for grub_custom kernel update. Re-running script won’t break anything.
+* Run script after dom0 / Xen kernel updates in default persistent dom0 for grub_custom kernel update. Re-running script won’t break anything.
 
-You can update templates if they are not added to varlibqubes pool. But always update dom0 in persistent mode (default boot)!
+* You can update templates if they are not added to varlibqubes pool. But always update dom0 in persistent mode (default boot)!
 
-You can make backups of all VMs (and dom0) in amnesic modes. Don’t back up vm-copies - it will only increase the backup size. If you need to create backup a vm-copy, then vm-copy must be powered off (this rule applies to VMs from varlibqubes), otherwise backup won’t work.
+* You can make backups of all VMs (and dom0) in amnesic modes. Don’t back up vm-copies - it will only increase the backup size. If you need to create backup a vm-copy, then vm-copy must be powered off (this rule applies to VMs from varlibqubes), otherwise backup won’t work.
 
-Max memory in zram mode must exceed the size of dom0 on disk. For example, if dom0 size is 10 GB, zram disk size should be at least 13 GB (dom0 + 3 GB free space). Otherwise, zram0 mode will fail to start due to insufficient disk space! This error may occur after a dom0 update, as updates increase the size of dom0 on the disk.
+* Max memory in zram mode must exceed the size of dom0 on disk. For example, if dom0 size is 10 GB, zram disk size should be at least 13 GB (dom0 + 3 GB free space). Otherwise, zram0 mode will fail to start due to insufficient disk space! This error may occur after a dom0 update, as updates increase the size of dom0 on the disk.
 
 
 
