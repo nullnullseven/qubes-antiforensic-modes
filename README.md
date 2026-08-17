@@ -24,8 +24,8 @@ Your appVMs / Templates in default vm-pool will act like templates: make persist
 If you copied sys-usb, enable keyboard and mouse support for the sys-usb copy in Qubes Global Settings. Do not run both sys-usb qubes simultaneously. Also, do not run sys-whonix and its copy at the same time. Additionally, add the sys-whonix copy to Updates in Qubes Global Settings for automatic updates.
 
 Remember:
-varlibqubes pool = full amnesia mode (if dom0 in amnesic mode)
-vm-pool = persistent mode (even if dom0 in amnesic mode!)
+`varlibqubes pool` = full amnesia mode (if dom0 in amnesic mode)
+`vm-pool` = persistent mode (even if dom0 in amnesic mode!)
 
 Run script after dom0 / Xen kernel updates in default persistent dom0 for grub_custom kernel update. Re-running script won’t break anything.
 
