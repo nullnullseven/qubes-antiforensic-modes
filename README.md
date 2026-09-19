@@ -51,3 +51,15 @@ See this repo for creating new ephemeral thin pools: https://github.com/nullnull
 
 **Qubes Zram-Live Amnesic Mode** – this mode sets up live mode via zram: root FS from disk is copied into zram (compressed block device in RAM), then mounted for fully memory-based operation. The pivot completes with the zram-backed filesystem mounted as the new /sysroot with restrictive flags, after which the underlying physical root is detached. This yields a zero-write, wear-free runtime environment that eliminates disk I/O latency for system operations, and isolates the physical storage from all runtime mutations. This mode is heavily dependent on RAM - you use 80% of the device’s memory multiplied by ~2x zram compression for live storage.
 
+Use this bashrc theme for checking dom0 mode https://github.com/nullnullseven/bashrc-themes/blob/main/cyberpunk-theme
+
+<img width="579" height="99" alt="87e6447a814b770afe41ef3031736daf723edfe4" src="https://github.com/user-attachments/assets/798be937-a32c-47bc-aeac-e478981b3d7c" />
+
+
+
+<img width="357" height="99" alt="0a0f77bc9cbb0d8935ca8a3b73e275329cca37cc" src="https://github.com/user-attachments/assets/22bd79d1-4bc3-42d3-ab24-b5bb0ec10323" />
+
+
+
+<img width="404" height="93" alt="62e016f8dbf74afab1076efc2ef7bf9238754088" src="https://github.com/user-attachments/assets/42f38a26-a87d-4676-b3ef-d70587927ce0" />
+
