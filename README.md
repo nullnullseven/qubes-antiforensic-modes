@@ -19,6 +19,13 @@ To run any qube in amnesia mode, just copy any qube to the varlibqubes pool and 
 
 In Qube Manager click clone qube and in Advanced select varlibqubes in Storage pool. Or create a new appVM, and select varlibqubes Storage pool in the Advanced Options.
 
+Don’t worry about installing these modes - default Qubes boot won’t be affected at all and won’t change! I created this scenario to be as safe as possible and isolated from the default Qubes boot:
+New GRUB options are added to /etc/grub.d/40_custom (so it don’t modify your /etc/default/grub).
+dom0 size is only changed if there is more than 100 GB of free space on the disk.
+New sysctl options start only in live modes.
+New dracut live modules start only in live modes.
+GRUB, /boot and initramfs/dracut updates disabled in live modes.
+
 **Notes:**
 * Your appVMs / Templates in default vm-pool will act like templates: make persistent changes there, while qubes in the varlibqubes pool will behave like disposable VMs (dvm) - they will be completely wiped after dom0 shutdown.
 
